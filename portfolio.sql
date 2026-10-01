@@ -1,0 +1,5 @@
+CREATE DATABASE IF NOT EXISTS portfolio;
+USE portfolio;
+CREATE TABLE IF NOT EXISTS projects(id INT AUTO_INCREMENT PRIMARY KEY,title VARCHAR(100) NOT NULL,description TEXT NOT NULL,technologies VARCHAR(255),github_url VARCHAR(255),live_url VARCHAR(255),image_url VARCHAR(255),created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+CREATE TABLE IF NOT EXISTS messages(id INT AUTO_INCREMENT PRIMARY KEY,name VARCHAR(100) NOT NULL,email VARCHAR(150) NOT NULL,message TEXT NOT NULL,created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+INSERT INTO projects(title,description,technologies,github_url,live_url) VALUES('Stock Management System','A web-based application for managing products, purchases, sales, stock levels and reports.','HTML, CSS, JavaScript, Python Flask, MySQL','https://github.com/yourusername/stock-management-system',''),('Personal Portfolio','A full-stack personal portfolio with a dynamic project section and contact form.','HTML, CSS, JavaScript, Node.js, Express.js, MySQL','https://github.com/yourusername/personal-portfolio','');
